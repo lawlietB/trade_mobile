@@ -213,11 +213,6 @@ MY DESIGN
 #age .age{color: red;}
 #view .view{color: red;}
 
-#price .quality, #price .age,#price .view{display: none;}
-#quality .price,#quality .age, #quality .view{display: none;}
-#age .price, #age .quality, #age .view{display: none;}
-#view .price,#view .quality, #view .age{display: none;}
-
 .buyphone{
 background-color: red;
 color:white ;
