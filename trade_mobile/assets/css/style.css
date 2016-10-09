@@ -213,8 +213,51 @@ MY DESIGN
 #age .age{color: red;}
 #view .view{color: red;}
 
+#price .quality, #price .age,#price .view{display: none;}
+#quality .price,#quality .age, #quality .view{display: none;}
+#age .price, #age .quality, #age .view{display: none;}
+#view .price,#view .quality, #view .age{display: none;}
+
+.buyphone{
+background-color: red;
+color:white ;
+border-radius:10px;
+font-size: 20px;
+font-family:'Open Sans', sans-serif;
+padding-bottom: 10px;
+padding-bottom: 10px;
+}
+
 .moreproduct{
 background-color: lightyellow;
 color: red;
 border-radius:10px;
+}
+
+@media (max-width: 767px){
+.navbar,.main,.moreproduct,.space{display: none;}
+}
+	
+.page-head-line {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00CA79;
+    margin-bottom: 10px;
+}
+
+.page-subhead-line {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-style: italic;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #00CA79;
+}
+
+.inforright{
+	float: right;
+	
 }

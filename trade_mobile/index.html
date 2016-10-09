@@ -29,7 +29,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" class="fa fa-shopping-cart">&nbsp; I WANT TO SELL MY PHONE</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="trade_mobile/index.html">VietNam</a></li>
+                            <li><a href="index.html">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <form class="navbar-form" role="search">
                     <div class="form-group">
@@ -40,12 +46,13 @@
                 </form>
             </div>
             <!-- /.navbar-collapse -->
+			
         </div>
         <!-- /.container-fluid -->
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-10 bestproduct">
                 <div class="main box-border">
 				
                     <div id="mi-slider" class="mi-slider">
@@ -134,11 +141,21 @@
             </div>
             <!-- /.col: More Product -->
             
-            <div class="col-md-2 text-center ">
-                    <div class="thumbnail product-box moreproduct">
-                        <h1>More...</h1>
-						<h1 class="fa fa-angle-double-down"></h1>
-                    </div>
+            <div class="col-md-2 text-center ">	
+				
+                <div class="thumbnail buyphone">
+					<a href="seller.html">
+						<h1 class="fa fa-money"></h1>
+                        <h3 class="buyphone">SELL MY PHONE</h3>	
+					</a>
+                </div>
+				
+				<br class="space"><br class="space"><br class="space"><br class="space"><br class="space"><br class="space"><br class="space">
+				<br class="space"><br class="space"><br class="space"><br class="space">
+				<div class="thumbnail moreproduct">
+                        <h3>MORE...</h3>
+						<h1 class="fa fa-angle-double-down"></h1>						
+                </div>
             </div>
             <!-- /.col -->
         </div>
@@ -146,8 +163,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div>
-                    <a href="#" class="list-group-item active">Brands
-                    </a>
+                    <p class="list-group-item active list-group-item-success">Brand</p>
                     <ul class="list-group">
 
                         <li class="list-group-item"><a href="#">Iphone</a>
