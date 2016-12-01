@@ -218,17 +218,20 @@ MY DESIGN
 .buyphone{
 background-color: red;
 color:white ;
-border-radius:10px;
+border-radius:20%;
 font-size: 20px;
 font-family:'Open Sans', sans-serif;
-padding-bottom: 10px;
-padding-bottom: 10px;
+padding-top: 0px;
+padding-bottom: 5px;
 }
 
 .moreproduct{
 background-color: lightyellow;
 color: red;
 border-radius:10px;
+position: relative;
+top: 100px;
+left: 100px;
 }
 
 @media (max-width: 767px){
@@ -255,6 +258,15 @@ border-radius:10px;
 }
 
 .inforright{
-	float: right;
-	
+	float: right;	
+}
+
+#img{
+	 width: 200px;
+    height: 150px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
