@@ -3,7 +3,7 @@
 		$key = $_GET["keyword"];
 	$db = new DataAccessHelper;
 	$db->connect();
-	$tmp = $db->executeQuery("SELECT * FROM product");
+	$tmp = $db->executeQuery("SELECT * FROM _product");
 	if(mysqli_num_rows($tmp) > 0){
 
 		while($row = mysqli_fetch_assoc($tmp)){

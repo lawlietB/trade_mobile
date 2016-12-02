@@ -153,75 +153,44 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1 class="page-head-line">FILL INFORMATION</h1>
-					<h1 class="page-subhead-line">Fill your information and your phone</h1>
+					<h1 class="page-subhead-line">Fill your information</h1>
 				</div>
 			</div>
 			<!--Information-->
-			<form action="createpost.php" method='post' enctype="multipart/form-data">		
-					<div class="col-md-10 col-sm-12 col-xs-12">
+			<form action="signup.php" method='post' enctype="multipart/form-data">
+					<div class="col-md-10 col-sm-12 col-xs-12" id="person_information">
 						<div class="panel panel-info">
 							<div class="panel-heading">
-								YOUR PHONE
+								YOUR INFORMATION
 							</div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label>Phone Name</label></br>
-                                <input class="form-control" type="text" name="phonename">
-                            </div>
-							
-							<div class="form-group">
-                                <label>Brand</label><br>
-                                <select name="type">
-									<option>Iphone</option>
-									<option>Samsung</option>
-									<option>LG</option>
-									<option>HTC</option>
-									<option>Sony</option>
-									<option>Asus</option>
-									<option>Lenovo</option>
-									<option>Huewei</option>
-									<option>Xiaomi</option>
-									<option>Oppo</option>
-									<option>Q-mobile</option>
-									<option>Nokia</option>
-								</select>
-                            </div>
-							<div class="form-group">
-                                <label>Price</label>
-                                <input class="form-control" type="text" name="price">
-                            </div>
-							<div class="form-group">
-                                <label>Quality</label>
-                                <select name="new">
-									<option>new</option>
-									<option>>95%</option>
-									<option>>90%</option>
-									<option>90%</option>
-								</select>
-                            </div>
-							<div class="form-group">
-                                <label>Age</label>
-                                <select name="age">
-									<option>< 1 month</option>
-									<option>< 3 months</option>
-									<option>< 6 months</option>
-									<option>< 1 year</option>
-									<option>< 2 years</option>
-									<option>< 5 years</option>
-								</select>
-                            </div>
-							<div class="form-group choose_pic">
-								<label class="control-label col-lg-3">Image Upload</label>
-									<input type="file" name="imglink">
+							<div class="panel-body">
+								<div class="form-group">
+									<label>Your Name/Nick Name</label>
+									<input class="form-control" type="text" name="name">
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									<input class="form-control" type="password" name="password">
+								</div>
+								<div class="form-group">
+									<label>Your Number Phone</label>
+									<input class="form-control" type="text" name="phone">
+								</div>
+								<div class="form-group">
+									<label>Your Email Address</label>
+									<input class="form-control" type="text" name="email">
+								</div>
+								<div class="form-group">
+									<label>Your Address</label>
+									<input class="form-control" type="text" name="address">
+								</div>
+								<button type="submit" name="submit" class="btn btn-danger">Sign up</button>
 							</div>
-							<div name="error" class="error"></div>
-							
 						</div>
-					</div>
-				<button type="submit" name="submit" class="btn btn-danger">Trade Now </button>
+					</div>	
 			</form>
 			
-		</div>
+		
 	</div>
         <!-- /.row -->
 </div>
