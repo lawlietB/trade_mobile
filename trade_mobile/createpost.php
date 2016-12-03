@@ -1,12 +1,6 @@
 <?php
 	include 'data_access_helper.php';
-	include('simplehtmldom_1_5/simple_html_dom.php');
-	//lay thong tin khach hang
-	$seller_name = $_POST["nameseller"];
-	$phone = $_POST["phone"];
-	$email = $_POST["email"];
-	$address = $_POST["address"];
-	
+	session_start();
 	//lay thong tin san pham
 	$phonename=$_POST["phonename"];
 	$brand=$_POST["type"];
@@ -32,18 +26,19 @@
 		
 	//kiem tra thong tin
 	if(isset($_POST['submit'])){
-		if($image == NULL || $seller_name == NULL || $phone == NULL || $email == NULL || $address == NULL || $phonename == NULL ||$brand == NULL ||$price == NULL){
+		if($image == NULL ||$phonename == NULL ||$brand == NULL ||$price == NULL){
 			echo "Data is Null";
-			die();
+			header('createpost.php');
 	}	}
-	
+	$iduser = $_SESSION['username'];
 
 		$db = new DataAccessHelper;
 		$db->connect();
 		$db->executeQuery("INSERT INTO _product(idphone,phonename,brand,price,quality,age,imglink) values ('$idphone','$phonename','$brand','$price','$quality','$age','$image')");
-		$db->executeQuery("INSERT INTO seller(name,phone,email,address,idphone) values ('$seller_name','$phone','$email','$address','$idphone')");
 		$db->close();
-		echo "Inserted 1 record to db";
-		return require("seller.html");
+		$db->connect();
+		$db->executeQuery("INSERT INTO _trade(idphone, iduser) values ('$idphone','$iduser')");
+		$db->close();
+		header("index.php");
 
 ?>

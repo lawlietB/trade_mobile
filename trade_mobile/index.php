@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,14 +30,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li id="username"></li>
-					<li>
-                        <a href="login.html">Sign in</a>
-                    </li>
-					<li>
-                        <a href="signup.html">Sign up</a>
-                    </li>
+					<?php
+					if (isset($_SESSION['username'])){
+						echo "<li><a href='#'>Hi, ".$_SESSION['username']."</a></li>";
+						echo "<li><a href='logout.php'>Log out</a></li>";
+					}else{
+						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
+					}
+					?>
                 </ul>
+				
                 <form id="search" class="navbar-form" role="search" action="search.php" method="get">
                     <div class="form-group">
                         <input type="text" placeholder="Enter Keyword Here ..." class="form-control" name="keyword">
@@ -144,8 +147,8 @@
             
             <div class="col-md-2 text-center ">	
 				
-                <div class="btn btn-danger">
-					<a href="seller.html">
+                <div id="sellphone" class="btn btn-danger">
+					<a href="seller.php">
                         <h4> <i class="fa fa-money"></i>&nbsp;SELL MY PHONE</h4>	
 					</a>
                 </div>

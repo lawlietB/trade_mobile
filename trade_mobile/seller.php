@@ -1,5 +1,9 @@
-<?php session_start();
-?>
+<?php 
+	session_start();
+	if (!isset($_SESSION['username'])) {
+	header('Location: login.html');
+}
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +35,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="seller.html" class="fa fa-money">&nbsp;SELL MY PHONE</a></li>
 					<ul class="nav navbar-nav navbar-right">
-                    <?php
+           
+					<?php
 					if (isset($_SESSION['username'])){
+						echo "<li><a href='#'>Hi, ". $_SESSION['username']."</a></li>";
 						echo "<li><a href='logout.php'>Log out</a></li>";
 					}else{
 						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
 					}
 					?>
+                
                 </ul>
                 </ul>
                 <form class="navbar-form" role="search" action="search.php" method="get">
