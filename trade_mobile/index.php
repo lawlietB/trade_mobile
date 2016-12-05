@@ -271,60 +271,49 @@
                 <!-- /.row -->
 				<div id="_product">
 					<!--Product-->
-                     <?php
-						include 'data_access_helper.php';
-						$db = new DataAccessHelper;
-						$db->connect();
-						$tmp = $db->executeQuery("SELECT phonename, price, brand, quality, age, imglink FROM _product, _trade, _user WHERE _trade.username = _user.username and _product.idphone = _trade.idphone");
-						if(mysqli_num_rows($tmp) > 0){
-
-							while($row = mysqli_fetch_assoc($tmp)){
-								echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
+                <?php
+					$per_page = 12;
+					mysql_connect("localhost","root","");
+					mysql_select_db("trademobile");
+					//count product
+					$res_cou = mysql_query("SELECT idphone from _product");
+					$cou = mysql_num_rows($res_cou);
+					if(isset($_GET["page"]))
+						$page = $_GET["page"];
+					else $page = 0;
+					if($page=="" || $page < "1"|| $page=="1"){
+						$page_num = 0;
+					}
+					else if($page > ceil($cou/$per_page)){
+						$page_num =  ceil($cou/$per_page);
+					}
+					else{
+						$page_num = ($page*$per_page) -	$per_page;
+					}
+					$res=mysql_query("SELECT phonename, price, brand, quality, age, imglink FROM _product, _trade, _user WHERE _trade.username = _user.username and _product.idphone = _trade.idphone limit $page_num, $per_page");
+					while($row=mysql_fetch_array($res)){
+						echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
 								echo "<div class='thumbnail product-box' style='height:250px'>";
 								echo "<img style='height:160px' src='".$row["imglink"]."'/>";
 								echo "<div class='caption'>";
 								echo "<br>";
 								echo "<h4><a href='#'>".$row["phonename"]." - ".$row["brand"]."</a></h4>";
-								/*$quality;
-								$age;
-								switch($row["quality"]){
-									case 1: $quality = "new"; break;
-									case 2: $quality = "95%"; break;
-									case 3: $quality = "91%"; break;
-									case 4: $quality = "90%"; break;
-								}
-								switch($row["age"]){
-									case 1: $age = "1 month"; break;
-									case 2: $age = "3 months"; break;
-									case 3: $age = "6 months"; break;
-									case 4: $age = "1 year"; break;
-									case 5: $age = "2 years"; break;
-									case 6: $age = "5 years"; break;
-								}
-                                echo "<p class='price'>Price : <strong>$".$row["price"]."</strong></p><p class='quality'>Quality : <strong>".$quality."</strong></p><p  class='age'>Age : <strong>".$age."</strong></p>";
-                                echo "<p><a href='#' class='btn btn-success' role='button'>Add To Cart</a></p>";
-								*/
 								echo "</div></div></div>";
-							}
-						} else{
-							echo "0 results";
 					}
-						$db->close();
+				//count number of page
+				$a = ceil($cou/$per_page); //a is number of page
 				?>
-                </div>
+					<div class="row">
+						<ul class="pagination alg-right-pad">
+							<?php
+								for($b = 1; $b <= $a; $b++){
+								?><li><a href="index.php?page=<?php echo $b;?>"> <?php echo $b." "; ?></a><?php	
+							}
+							?>
+						</ul>
+					</div>
+				</div>
                     <!-- /.col -->
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <ul class="pagination alg-right-pad">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
                 </div>
                 <!-- /.row -->
             </div>
@@ -352,7 +341,6 @@
         $(function () {
 
             $('#mi-slider').catslider();
-			$('#mi-slider).();
 
         });
 		</script>
