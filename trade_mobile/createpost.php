@@ -35,10 +35,8 @@
 		$db = new DataAccessHelper;
 		$db->connect();
 		$db->executeQuery("INSERT INTO _product(idphone,phonename,brand,price,quality,age,imglink) values ('$idphone','$phonename','$brand','$price','$quality','$age','$image')");
+		$db->executeQuery("INSERT INTO _trade(idphone, username) values ('$idphone','$iduser')");
 		$db->close();
-		$db->connect();
-		$db->executeQuery("INSERT INTO _trade(idphone, iduser) values ('$idphone','$iduser')");
-		$db->close();
-		header("index.php");
+		header('Location:index.php');
 
 ?>

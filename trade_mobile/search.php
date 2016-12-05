@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,26 +24,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><strong style="color:#33CC66">TRADE</strong>MOBILE</a>
+                <a class="navbar-brand" href="index.php"><strong style="color:#33CC66">TRADE</strong>MOBILE</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="trade_mobile/index.html">VietNam</a></li>
-                            <li><a href="index.html">English</a></li>
-                        </ul>
-                    </li>
+					<?php
+					if (isset($_SESSION['username'])){
+						echo "<li><a href='#'>Hi, ".$_SESSION['username']."</a></li>";
+						echo "<li><a href='logout.php'>Log out</a></li>";
+					}else{
+						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
+					}
+					?>
                 </ul>
                 <form class="navbar-form" role="search" action="search.php" method="get">
                     <div class="form-group">
                         <input type="text" placeholder="Enter Keyword Here ..." class="form-control" name="keyword">
                     </div>
                     &nbsp; 
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-success">Search</button>
                 </form>
             </div>
             <!-- /.navbar-collapse -->
@@ -166,40 +168,40 @@
                     <p class="list-group-item active list-group-item-success">Brand</p>
                     <ul class="list-group">
 
-                        <li class="list-group-item"><a href="#_product">Iphone</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Iphone" class="btn btn-default option"></input></form>
 							
                         </li>
-                        <li class="list-group-item"><a href="#_product">Sumsung</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Samsung" class="btn btn-default option"></input></form>
 						
                         </li>
-                        <li class="list-group-item"><a href="#_product">LG</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:89.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="LG" class="btn btn-default option"></input></form>
 					
                         </li>
-                        <li class="list-group-item"><a href="#_product">HTC</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:85.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="HTC" class="btn btn-default option"></input></form>
                            
                         </li>
-                        <li class="list-group-item"><a href="#_product">Sony</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:84%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Sony" class="btn btn-default option"></input></form>
                         
                         </li>
-						<li class="list-group-item"><a href="#_product">Asus</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:84%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Asus" class="btn btn-default option"></input></form>
                         
                         </li>
-						<li class="list-group-item"><a href="#_product">Lenovo</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Lenovo" class="btn btn-default option"></input></form>
                           
                         </li>
-						<li class="list-group-item"><a href="#_product">Huewei</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:77%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Huewei" class="btn btn-default option"></input></form>
                            
                         </li>
-						<li class="list-group-item"><a href="#_product">Xiaomi</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78.5%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Xiaomi" class="btn btn-default option"></input></form>
                          
                         </li>
-						<li class="list-group-item"><a href="#_product">Oppo</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:82%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Oppo" class="btn btn-default option"></input></form>
                       
                         </li>
-						<li class="list-group-item"><a href="#_product">Q-mobile</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Q-mobile" class="btn btn-default option"></input></form>
                        
                         </li>
-						<li class="list-group-item"><a href="#_product">Nokia</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:81.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Nokia" class="btn btn-default option"></input></form>
                      
                         </li>
                     </ul>
@@ -272,17 +274,18 @@
 						$key = $_GET["keyword"];
 						$db = new DataAccessHelper;
 						$db->connect();
-						$tmp = $db->executeQuery("SELECT phonename, price, brand, quality, age, imglink FROM _product, seller WHERE phonename LIKE '%$key%' && seller.idphone = _product.idphone");
+	
+						$tmp = $db->executeQuery("SELECT phonename, price, brand, quality, age, imglink FROM _product, _trade, _user WHERE _trade.username = _user.username and _product.idphone = _trade.idphone and (_product.phonename LIKE '%$key%' or _product.brand like '%$key%')");
 						if(mysqli_num_rows($tmp) > 0){
 
 							while($row = mysqli_fetch_assoc($tmp)){
-								echo "<div class='col-md-4 text-center col-sm-6 col-xs-6 product'>";
-								echo "<div class='thumbnail product-box'>";
-								echo "<img src='".$row["imglink"]."'/>";
+								echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
+								echo "<div class='thumbnail product-box' style='height:250px'>";
+								echo "<img style='height:160px' src='".$row["imglink"]."'/>";
 								echo "<div class='caption'>";
 								echo "<br>";
-								echo "<h3><a href='#'>".$row["phonename"]." - ".$row["brand"]."</a></h3>";
-                               $quality;
+								echo "<h4><a href='#'>".$row["phonename"]." - ".$row["brand"]."</a></h4>";
+								/*$quality;
 								$age;
 								switch($row["quality"]){
 									case 1: $quality = "new"; break;
@@ -300,7 +303,8 @@
 								}
                                 echo "<p class='price'>Price : <strong>$".$row["price"]."</strong></p><p class='quality'>Quality : <strong>".$quality."</strong></p><p  class='age'>Age : <strong>".$age."</strong></p>";
                                 echo "<p><a href='#' class='btn btn-success' role='button'>Add To Cart</a></p>";
-								echo "</div></div></div>";	
+								*/
+								echo "</div></div></div>";
 							}
 						} else{
 							echo "0 results";

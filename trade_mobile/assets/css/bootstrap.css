@@ -308,21 +308,30 @@ img {
   vertical-align: middle;
 }
 .img-responsive,
-.thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  height: 150px;
+}
+.thumbnail > img
+{
+	width: auto;
+    height: 150px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 .img-rounded {
   border-radius: 6px;
 }
 .img-thumbnail {
   display: inline-block;
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  height: 150px;
   padding: 4px;
   line-height: 1.42857143;
   background-color: #fff;

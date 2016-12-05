@@ -53,7 +53,7 @@
                         <input type="text" placeholder="Enter Keyword Here ..." class="form-control" name="keyword">
                     </div>
                     &nbsp; 
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-success">Search</button>
                 </form>
             </div>
             <!-- /.navbar-collapse -->
@@ -68,41 +68,41 @@
                     <p class="list-group-item active list-group-item-success">Brand</p>
                     <ul class="list-group">
 
-                        <li class="list-group-item"><a href="index.html#_product">Iphone</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Iphone" class="btn btn-default option"></input></form>
 							
                         </li>
-                        <li class="list-group-item"><a href="index.html#_product">Sumsung</a>
-							
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Samsung" class="btn btn-default option"></input></form>
+						
                         </li>
-                        <li class="list-group-item"><a href="index.html#_product">LG</a>
-							
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:89.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="LG" class="btn btn-default option"></input></form>
+					
                         </li>
-                        <li class="list-group-item"><a href="index.html#_product">HTC</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:85.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="HTC" class="btn btn-default option"></input></form>
                            
                         </li>
-                        <li class="list-group-item"><a href="index.html#_product">Sony</a>
-                            
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:84%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Sony" class="btn btn-default option"></input></form>
+                        
                         </li>
-						<li class="list-group-item"><a href="index.html#_product">Asus</a>
-                            
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:84%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Asus" class="btn btn-default option"></input></form>
+                        
                         </li>
-						<li class="list-group-item"><a href="index.html#_product">Lenovo</a>
-                            
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Lenovo" class="btn btn-default option"></input></form>
+                          
                         </li>
-						<li class="list-group-item"><a href="index.html#_product">Huewei</a>
-                            
-                        </li>
-						<li class="list-group-item"><a href="index.html#_product">Xiaomi</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:77%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Huewei" class="btn btn-default option"></input></form>
                            
                         </li>
-						<li class="list-group-item"><a href="index.html#_product">Oppo</a>
-                            
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78.5%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Xiaomi" class="btn btn-default option"></input></form>
+                         
                         </li>
-						<li class="list-group-item"><a href="index.html#_product">Q-mobile</a>
-                            
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:82%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Oppo" class="btn btn-default option"></input></form>
+                      
                         </li>
-						<li class="list-group-item"><a href="index.html#_product">Nokia</a>
-                            
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Q-mobile" class="btn btn-default option"></input></form>
+                       
+                        </li>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:81.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Nokia" class="btn btn-default option"></input></form>
+                     
                         </li>
                     </ul>
                 </div>

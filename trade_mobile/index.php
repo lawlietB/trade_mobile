@@ -45,7 +45,7 @@
                         <input type="text" placeholder="Enter Keyword Here ..." class="form-control" name="keyword">
                     </div>
                     &nbsp; 
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-success">Search</button>
                 </form>
             </div>
             <!-- /.navbar-collapse -->
@@ -169,40 +169,40 @@
                     <p class="list-group-item active list-group-item-success">Brand</p>
                     <ul class="list-group">
 
-                        <li class="list-group-item"><a href="#search">Iphone</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Iphone" class="btn btn-default option"></input></form>
 							
                         </li>
-                        <li class="list-group-item"><a href="#search">Sumsung</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Samsung" class="btn btn-default option"></input></form>
 						
                         </li>
-                        <li class="list-group-item"><a href="#search">LG</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:89.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="LG" class="btn btn-default option"></input></form>
 					
                         </li>
-                        <li class="list-group-item"><a href="#search">HTC</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:85.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="HTC" class="btn btn-default option"></input></form>
                            
                         </li>
-                        <li class="list-group-item"><a href="#search">Sony</a>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:84%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Sony" class="btn btn-default option"></input></form>
                         
                         </li>
-						<li class="list-group-item"><a href="#search">Asus</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:84%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Asus" class="btn btn-default option"></input></form>
                         
                         </li>
-						<li class="list-group-item"><a href="#search">Lenovo</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Lenovo" class="btn btn-default option"></input></form>
                           
                         </li>
-						<li class="list-group-item"><a href="#search">Huewei</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:77%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Huewei" class="btn btn-default option"></input></form>
                            
                         </li>
-						<li class="list-group-item"><a href="#search">Xiaomi</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78.5%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Xiaomi" class="btn btn-default option"></input></form>
                          
                         </li>
-						<li class="list-group-item"><a href="#search">Oppo</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:82%;; border: 0px; margin: 0px;" type="submit" name="keyword" value="Oppo" class="btn btn-default option"></input></form>
                       
                         </li>
-						<li class="list-group-item"><a href="#search">Q-mobile</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Q-mobile" class="btn btn-default option"></input></form>
                        
                         </li>
-						<li class="list-group-item"><a href="#search">Nokia</a>
+						<li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:81.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Nokia" class="btn btn-default option"></input></form>
                      
                         </li>
                     </ul>
@@ -257,7 +257,7 @@
             <!-- /.col -->
             <div class="col-md-9">
                 <div>
-                    <ol class="breadcrumb" id="_product">
+                    <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                     </ol>
                 </div>
@@ -271,21 +271,21 @@
                 <!-- /.row -->
 				<div id="_product">
 					<!--Product-->
-                        ;<?php
+                     <?php
 						include 'data_access_helper.php';
 						$db = new DataAccessHelper;
 						$db->connect();
-						$tmp = $db->executeQuery("SELECT phonename, price, brand, quality, age, imglink FROM _product, _trade, _user WHERE _trade.idphone = _product.idphone and _user.id = _trade.iduser");
+						$tmp = $db->executeQuery("SELECT phonename, price, brand, quality, age, imglink FROM _product, _trade, _user WHERE _trade.username = _user.username and _product.idphone = _trade.idphone");
 						if(mysqli_num_rows($tmp) > 0){
 
 							while($row = mysqli_fetch_assoc($tmp)){
-								echo "<div class='col-md-4 text-center col-sm-6 col-xs-6 product'>";
-								echo "<div class='thumbnail product-box'>";
-								echo "<img class='img' src='".$row["imglink"]."'/>";
+								echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
+								echo "<div class='thumbnail product-box' style='height:250px'>";
+								echo "<img style='height:160px' src='".$row["imglink"]."'/>";
 								echo "<div class='caption'>";
 								echo "<br>";
 								echo "<h4><a href='#'>".$row["phonename"]." - ".$row["brand"]."</a></h4>";
-								$quality;
+								/*$quality;
 								$age;
 								switch($row["quality"]){
 									case 1: $quality = "new"; break;
@@ -303,14 +303,14 @@
 								}
                                 echo "<p class='price'>Price : <strong>$".$row["price"]."</strong></p><p class='quality'>Quality : <strong>".$quality."</strong></p><p  class='age'>Age : <strong>".$age."</strong></p>";
                                 echo "<p><a href='#' class='btn btn-success' role='button'>Add To Cart</a></p>";
-								echo "</div></div></div>";	
+								*/
+								echo "</div></div></div>";
 							}
 						} else{
 							echo "0 results";
 					}
-	
 						$db->close();
-?>
+				?>
                 </div>
                     <!-- /.col -->
                 </div>
@@ -352,6 +352,7 @@
         $(function () {
 
             $('#mi-slider').catslider();
+			$('#mi-slider).();
 
         });
 		</script>
