@@ -169,7 +169,7 @@
                     <p class="list-group-item active list-group-item-success">Brand</p>
                     <ul class="list-group">
 
-                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Iphone" class="btn btn-default option"></input></form>
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Iphone" class="btn btn-default option"></input></form> 
 							
                         </li>
                         <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Samsung" class="btn btn-default option"></input></form>
@@ -290,14 +290,15 @@
 					else{
 						$page_num = ($page*$per_page) -	$per_page;
 					}
-					$res=mysql_query("SELECT phonename, price, brand, quality, age, imglink FROM _product, _trade, _user WHERE _trade.username = _user.username and _product.idphone = _trade.idphone limit $page_num, $per_page");
+					$res=mysql_query("SELECT phonename, price, brand, quality, age, imglink, idphone FROM _product limit $page_num, $per_page");
 					while($row=mysql_fetch_array($res)){
 						echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
 								echo "<div class='thumbnail product-box' style='height:250px'>";
-								echo "<img style='height:160px' src='".$row["imglink"]."'/>";
+								echo "<img style='height:130px' src='".$row["imglink"]."'/>";
 								echo "<div class='caption'>";
 								echo "<br>";
-								echo "<h4><a href='#'>".$row["phonename"]." - ".$row["brand"]."</a></h4>";
+								echo "<h4>".$row["phonename"]."<h4>";
+								echo '<form action="product.php" method="post"><button type="submit" class="btn btn-success" name="product" value='.$row["idphone"].'>Contact</button></form>';
 								echo "</div></div></div>";
 					}
 				//count number of page
