@@ -26,7 +26,7 @@
 		
 	//kiem tra thong tin
 	if(isset($_POST['submit'])){
-		if($image == NULL ||$phonename == NULL ||$brand == NULL ||$price == NULL){
+		if($image === '.image./' ||$phonename == NULL ||$brand == NULL ||$price == NULL){
 			echo "Data is Null";
 			header('createpost.php');
 	}	}

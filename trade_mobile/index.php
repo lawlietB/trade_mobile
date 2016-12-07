@@ -14,7 +14,7 @@
     <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header	">
@@ -134,7 +134,7 @@
                         <nav class="navbar" data-toggle="collapse" data-target="#bs-example-navbar-collapse-12">
                             <a href="#">Price</a>
                             <a href="#">Quality</a>
-                            <a href="#">Age</a>
+                            <a href="#">Time used</a>
               				<a href="#">View</a>
 							
                         </nav>
@@ -152,13 +152,6 @@
                         <h4> <i class="fa fa-money"></i>&nbsp;SELL MY PHONE</h4>	
 					</a>
                 </div>
-				
-				<br class="space"><br class="space"><br class="space"><br class="space"><br class="space"><br class="space"><br class="space">
-				<br class="space"><br class="space"><br class="space">
-				<a href="#_product"><div class="thumbnail moreproduct">	
-					<h3 style="margin: 0;">MORE...</h3>
-					<h1 class="fa fa-angle-double-down" style="margin: 0"></h1>			
-                </div></a>
             </div>
             <!-- /.col -->
         </div>
@@ -247,9 +240,8 @@
 								
                             </ul>	
 						</li>
-                        <li class="list-group-item"><a href="#">Age</a></li>
-						<li class="list-group-item"><a href="#">Lastest</li>
-						<li class="list-group-item"><a href="#">View</li>
+                        <li class="list-group-item"><a href="#">Time used</a></li>
+
                     </ul>
                 </div>
                 <!-- /.div -->

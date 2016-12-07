@@ -31,6 +31,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="seller.php">
+                        <i class="fa fa-money"></i>&nbsp;SELL MY PHONE
+					</a>
+				</li>
 					<?php
 					if (isset($_SESSION['username'])){
 						echo "<li><a href='#'>Hi, ".$_SESSION['username']."</a></li>";
@@ -55,113 +60,7 @@
     </nav>
 	<br><br><br>
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 bestproduct">
-                <div class="main box-border">
-				
-                    <div id="mi-slider" class="mi-slider">
-                        <ul id="price">
-							<!--Price-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img01"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p>
-								<p class="quality">Quality : <strong>95%</strong></p>
-								<p  class="age">Age : <strong>1 year</strong></p>
-								<p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img02"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p>
-								<p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img03"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img04"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-                        <ul id="quality">
-							<!--Quality-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img05"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img06"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img07"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img08"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-                        <ul id="age">
-							<!--Age-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img09"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img10"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img11"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-							<li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img12"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-                       
-						<ul id="view">
-							<!--Hot-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img12"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img13"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img14"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img15"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-					
-						<!--Loc san pham theo:-->
-                        <nav class="navbar" data-toggle="collapse" data-target="#bs-example-navbar-collapse-12">
-                            <a href="#">Price</a>
-                            <a href="#">Quality</a>
-                            <a href="#">Age</a>
-              				<a href="#">View</a>
-							
-                        </nav>
-                    </div>
-                    
-                </div>
-                <br />
-            </div>
-            <!-- /.col: More Product -->
-            
-            <div class="col-md-2 text-center ">	
-				
-                <div class="btn btn-danger">
-					<a href="seller.php">
-                        <h4> <i class="fa fa-money"></i>&nbsp;SELL MY PHONE</h4>	
-					</a>
-                </div>
-				
-				<br class="space"><br class="space"><br class="space"><br class="space"><br class="space"><br class="space"><br class="space">
-				<br class="space"><br class="space"><br class="space">
-				<a href="#_product"><div class="thumbnail moreproduct">	
-					<h3 style="margin: 0;">MORE...</h3>
-					<h1 class="fa fa-angle-double-down" style="margin: 0"></h1>			
-                </div></a>
-            </div>
-            <!-- /.col -->
-        </div>
+       
         <!-- /.row -->
         <div class="row">
             <div class="col-md-3">

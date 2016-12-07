@@ -145,9 +145,8 @@
                                 <li><a href="index.html#_product">90%</a></li>
                             </ul>	
 						</li>
-                        <li class="list-group-item"><a href="index.html#_product">Age</a></li>
-						<li class="list-group-item"><a href="index.html#_product">Lastest</li>
-						<li class="list-group-item"><a href="index.html#_product">View</li>
+                        <li class="list-group-item"><a href="index.html#_product">Time used</a></li>
+
                     </ul>
                 </div>
                 <!-- /.div -->
@@ -195,8 +194,8 @@
 								</select>
                             </div>
 							<div class="form-group">
-                                <label>Price</label>
-                                <input class="form-control" type="text" name="price">
+                                <label>Price</label><p>(use dollar)</p>
+                                <input class="form-control" type="text" placeholder="100" name="price">
                             </div>
 							<div class="form-group">
                                 <label>Quality</label>
@@ -208,7 +207,7 @@
 								</select>
                             </div>
 							<div class="form-group">
-                                <label>Age</label>
+                                <label>Time used</label>
                                 <select name="age">
 									<option>< 1 month</option>
 									<option>< 3 months</option>

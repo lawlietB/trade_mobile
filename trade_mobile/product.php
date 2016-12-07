@@ -142,9 +142,8 @@
                                 <li><a href="index.html#_product">90%</a></li>
                             </ul>	
 						</li>
-                        <li class="list-group-item"><a href="index.html#_product">Age</a></li>
-						<li class="list-group-item"><a href="index.html#_product">Lastest</li>
-						<li class="list-group-item"><a href="index.html#_product">View</li>
+                        <li class="list-group-item"><a href="index.html#_product">Time used</a></li>
+
                     </ul>
                 </div>
                 <!-- /.div -->
@@ -175,21 +174,57 @@
 				echo "<img style='width: 370px' src='".$row["imglink"]."'/>";
 				echo "<p>Phone Name: ".$row["phonename"]." </p>";
 				echo "<p>Brand: ".$row["brand"]." </p>";
-				echo "<p>Price: ".$row["price"]." </p>";
-				echo "<p>Quality: ".$row["quality"]." </p>";
-				echo "<p>Age: ".$row["age"]." </p>";
+				echo "<p>Price: $".$row["price"]." </p>";
+				//set quality
+				if($row['quality'] == 1){
+					$quality='New';
+				}
+				else if($row['quality'] == 2){
+					$quality='95% - 100%';
+				}
+				else if($row['quality'] == 3){
+					$quality='90% - 95%';
+				}
+				else if($row['quality'] == 4){
+					$quality='90%';
+				}
+				//set time used
+				if($row['age'] == 1){
+					$age='I used it near 1 month';
+				}
+				else if($row['age'] == 2){
+					$age='I used it near 3 months';
+				}
+				else if($row['age'] == 3){
+					$age='I used it near 6 months';
+				}
+				else if($row['age'] == 4){
+					$age='I used it near 1 year';
+				}
+				else if($row['age'] == 5){
+					$age='I used it near 2 years';
+				}
+				else if($row['age'] == 6){
+					$age='I used it near 5 years';
+				}
+				
+				echo "<p>Quality: ".$quality." </p>";
+				echo "<p>Time used: ".$age." </p>";
 				echo "</div></div></div></div>";
 				
 				echo '<div class="col-md-4 col-sm-12 col-xs-12">';
 				echo '<div class="panel panel-info">';
 				echo '<div class="panel-heading">Seller</div>';
-				echo '<div class="panel-body"><div class="form-group">';
+				echo '<div class="panel-body"><div class="form-group" id="sellerinfo">';
 				echo "<p>Name: ".$row["username"]." </p>";
 				echo "<p>Phone: ".$row["phone"]." </p>";
 				echo "<p>Email: ".$row["email"]." </p>";
 				echo "<p>Address: ".$row["address"]." </p>";
-				echo "</div></div></div></div>";
-			?>	
+				echo "</div></div>";
+				echo '<center><button id="show" class="btn btn-success">Show info</button></center>';
+				echo "</div></div>";
+			?>
+				
 	</div>
         <!-- /.row -->
 </div>
@@ -216,6 +251,14 @@
             $('#mi-slider').catslider();
 
         });
+		$(function(){
+				$('#sellerinfo').hide();
+		});
+		$(function(){
+			$("#show").click(function(){
+				$('#sellerinfo').toggle();
+			});
+		});
 		</script>
 </body>
 </html>

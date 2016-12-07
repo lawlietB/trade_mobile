@@ -235,7 +235,7 @@ left: 100px;
 }
 
 @media (max-width: 767px){
-.navbar,.main,.moreproduct,.space{display: none;}
+.navbar,.main,.moreproduct,.space,{display: none;}
 }
 	
 .page-head-line {
