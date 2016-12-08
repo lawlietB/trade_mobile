@@ -166,7 +166,12 @@
 								</div>
 								<div class="form-group">
 									<label>Password</label>
-									<input class="form-control" type="password" name="password">
+									<input class="form-control" type="password" name="password" id="password">
+								</div>
+								<div class="form-group">
+									<label>Re-Password</label>
+									<input class="form-control" type="password" id="repassword">
+									<h6 id="checkpassword" style="color: red;"></h6>
 								</div>
 								<div class="form-group">
 									<label>Your Number Phone</label>
@@ -212,6 +217,17 @@
 
             $('#mi-slider').catslider();
 
+        });
+		
+		$(function () {
+            $('#repassword').change(function(){
+				if($('#password').val() !== $('#repassword').val()){
+				$("#checkpassword").html("your password is wrong");
+				}
+				else{
+					$("#checkpassword").html("");
+				}
+			});
         });
 		</script>
 </body>

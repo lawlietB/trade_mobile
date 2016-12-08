@@ -44,6 +44,7 @@
 					}else{
 						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
 					}
+					
 					?>
                 
                 </ul>
@@ -173,12 +174,13 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <label>Phone Name</label></br>
-                                <input class="form-control" type="text" name="phonename">
+                                <input class="form-control" type="text" name="phonename" id="phonename">
+								<h6 id="checkphonename" style="color: red;"></h6>
                             </div>
 							
 							<div class="form-group">
                                 <label>Brand</label><br>
-                                <select name="type">
+                                <select name="type" id="brand">
 									<option>Iphone</option>
 									<option>Samsung</option>
 									<option>LG</option>
@@ -195,7 +197,8 @@
                             </div>
 							<div class="form-group">
                                 <label>Price</label><p>(use dollar)</p>
-                                <input class="form-control" type="text" placeholder="100" name="price">
+                                <input class="form-control" type="text" placeholder="100" name="price" id="price">
+								<h6 id="checkprice" style="color: red;"></h6>
                             </div>
 							<div class="form-group">
                                 <label>Quality</label>
@@ -208,7 +211,7 @@
                             </div>
 							<div class="form-group">
                                 <label>Time used</label>
-                                <select name="age">
+                                <select name="age" id="age">
 									<option>< 1 month</option>
 									<option>< 3 months</option>
 									<option>< 6 months</option>
@@ -219,13 +222,14 @@
                             </div>
 							<div class="form-group choose_pic">
 								<label class="control-label col-lg-3">Image Upload</label>
-									<input type="file" name="imglink">
+									<input type="file" name="imglink" id="img">
+									<h6 id="checkimg" style="color: red;"></h6>
 							</div>
 							<div name="error" class="error"></div>
 							
 						</div>
 					</div>
-				<button type="submit" name="submit" class="btn btn-danger">Trade Now </button>
+				<button type="submit" name="submit" class="btn btn-danger" id="info">Trade Now </button>
 			</form>
 			
 		</div>
@@ -251,9 +255,17 @@
     <script src="assets/ItemSlider/js/jquery.catslider.js"></script>
     <script>
         $(function () {
-
             $('#mi-slider').catslider();
-
+        });
+		
+		$(function () {
+            $('#info').hover(function(){
+				if($('#phonename').val() == NULL || $('#price').val() == NULL || $('#img').val() == NULL){
+					alert("You must fill all value");
+					exit();
+				}
+				
+			});
         });
 		</script>
 </body>
