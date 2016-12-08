@@ -26,17 +26,24 @@
 		
 	//kiem tra thong tin
 	if(isset($_POST['submit'])){
-		if($image == NULL ||$phonename == NULL ||$brand == NULL ||$price == NULL){
-			echo "Data is Null";
-			header('seller.php');
-	}	}
+		if($image == './image/' ||$phonename == NULL ||$brand == NULL ||$price == NULL){
+			$fail = 1;
+		}	
+	}
 	$iduser = $_SESSION['username'];
 
+	if($fail == 0){
 		$db = new DataAccessHelper;
 		$db->connect();
 		$db->executeQuery("INSERT INTO _product(idphone,phonename,brand,price,quality,age,imglink) values ('$idphone','$phonename','$brand','$price','$quality','$age','$image')");
 		$db->executeQuery("INSERT INTO _trade(idphone, username) values ('$idphone','$iduser')");
 		$db->close();
 		header('Location:index.php');
+			
+	}
+	else{
+		header('Location:seller.php');
+	}
+		
 
 ?>
