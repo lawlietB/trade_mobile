@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Brand and toggle sget grouped for better mobile display -->
             <div class="navbar-header	">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -185,7 +185,7 @@
 									<label>Your Address</label>
 									<input class="form-control" type="text" name="address">
 								</div>
-								<button type="submit" name="submit" class="btn btn-danger">Sign up</button>
+								<button type="submit" name="submit" class="btn btn-danger" id="submit">Sign up</button>
 							</div>
 						</div>
 					</div>	
@@ -223,12 +223,15 @@
             $('#repassword').change(function(){
 				if($('#password').val() !== $('#repassword').val()){
 				$("#checkpassword").html("your password is wrong");
+				$('#submit').addClass('disabled');
 				}
 				else{
 					$("#checkpassword").html("");
+					$('#submit').removeClass('disabled');
 				}
 			});
-        });
+			$('#submit').addClass('disabled');
+        });		
 		</script>
 </body>
 </html>
