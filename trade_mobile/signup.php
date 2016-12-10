@@ -44,16 +44,16 @@
         echo "<script> alert('Email has already created. Please fill other email');</script>";
 		$fail = 1;
     }
-		if($fail == 0){
-			$db->executeQuery("INSERT INTO _user(username, password, phone, email, address) values ('$user_name','$password','$phone','$email','$address')");
-			$db->close();
-			require('login.html');
-			
-		}
-		else{
-			$db->close();
-			require('signup.html');
-		}
+			if($fail == 0){
+				$db->executeQuery("INSERT INTO _user(username, password, phone, email, address) values ('$user_name','$password','$phone','$email','$address')");
+				$db->close();
+				require('login.html');
+				
+			}
+			else{
+				$db->close();
+				require('signup.html');
+			}
 		
 
 ?>

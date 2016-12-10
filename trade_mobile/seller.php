@@ -39,7 +39,7 @@
            
 					<?php
 					if (isset($_SESSION['username'])){
-						echo "<li><a href='#'>Hi, ". $_SESSION['username']."</a></li>";
+						echo "<li><a href='myaccount.php'>Hi, ". $_SESSION['username']."</a></li>";
 						echo "<li><a href='logout.php'>Log out</a></li>";
 					}else{
 						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
@@ -241,7 +241,9 @@
      <!--Footer -->   
     <!-- /.col -->
     <div class="col-md-12 end-box ">
-        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)
+        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)<br>
+		Email: binhnguyen2805@gmail.com<br>
+		Phone: 0973154950
     </div>
 	</div>
     <!-- /.col -->

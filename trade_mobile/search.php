@@ -38,7 +38,7 @@
 				</li>
 					<?php
 					if (isset($_SESSION['username'])){
-						echo "<li><a href='#'>Hi, ".$_SESSION['username']."</a></li>";
+						echo "<li><a href='myaccount.php'>Hi, ".$_SESSION['username']."</a></li>";
 						echo "<li><a href='logout.php'>Log out</a></li>";
 					}else{
 						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
@@ -170,7 +170,7 @@
                 <!-- /.row -->
 				<div id="_product">
 				<?php
-					$per_page = 6;
+					$per_page = 12;
 					$key = $_GET["keyword"];
 					mysql_connect("localhost","root","");
 					mysql_select_db("trademobile");
@@ -194,11 +194,13 @@
 					$res=mysql_query("SELECT phonename, price, brand, quality, age, imglink, idphone FROM _product WHERE phonename LIKE '%$key%' or _product.brand like '%$key%' limit $page_num, $per_page");
 					while($row=mysql_fetch_array($res)){
 								echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
-								echo "<div class='thumbnail product-box' style='height:250px'>";
+								echo "<div class='thumbnail product-box' style='height:300px'>";
 								echo "<img style='height:135px' src='".$row["imglink"]."'/>";
 								echo "<div class='caption'>";
 								echo "<br>";
+								
 								echo "<h4>".$row["phonename"]."<h4>";
+								echo "<h5>".$row["price"]."<h5>";
 								echo '<form action="product.php" method="post"><button type="submit" class="btn btn-success" name="product" value='.$row["idphone"].'>Contact</button></form>';
 								echo "</div></div></div>";
 					}

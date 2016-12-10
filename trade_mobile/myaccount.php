@@ -179,7 +179,7 @@
 		<div class="panel panel-info" id="myinfo">
 			<div class="panel-heading">My information</div>
 				<div class="panel-body form-horizontal">
-<form class="form-horizontal" action="myaccount.php" method="post" role="form">
+<form class="form-horizontal" action="change_info.php" method="post" role="form">
   <div class="form-group">
     <label class="col-sm-2 control-label">Name</label>
     <div class="col-sm-10">
@@ -212,22 +212,7 @@
   </div>
 </form>
 </div></div></div>
-<?php
-if(isset($_POST['submit'])){
-	mysql_connect("localhost","root","");
-	mysql_select_db("trademobile");
-	$username = $_SESSION['username'];
-	$name = $_POST['name'];
-	$phone = $_POST['phone'];
-	$email = $_POST['email'];
-	$address = $_POST['address'];
-	mysql_query("UPDATE _user SET phone='$phone' WHERE username='$username'");
-	mysql_query("UPDATE _user SET email='$email' WHERE username='$username'");
-	mysql_query("UPDATE _user SET address='$address' WHERE username='$username'");
-	mysql_query("UPDATE _user SET username='$name' WHERE username='$username'");
-	header('Location:myaccount.php');
-}
-?>
+
 <div class="col-md-10 col-sm-12 col-xs-12">
 	<div class="panel panel-info">
 		<div class="panel-heading">My Phone</div>
@@ -277,15 +262,18 @@ if(isset($_POST['submit'])){
 					$age='near 5 years';
 				}
 						echo "<tr><td>".$row["phonename"]."</td><td><center>".$row["price"]."</center></td><td><center>".$row["brand"]."</center></td><td><center>".$quality."</center></td><td><center>".$age."</center></td>";
-						echo '<td><center><button type="submit" class="btn btn-danger" id="'.$row["phonename"].'">Del	</button></center></td></tr>';
-					}
+						echo '<td><center>
+								<form action="delete_product.php" method="get">
+									<button name="submit" type="submit" name="del_product" class="btn btn-danger" value="'.$row["idphone"].'">Del</button>
+								</form>
+							</center></td></tr>';
+			}
 				?>
 				</table>
 				</div>
 			</div>
 		</div>
 	</div>
-
 				
 	</div>
         <!-- /.row -->

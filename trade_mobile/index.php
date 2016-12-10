@@ -17,7 +17,7 @@
     <nav class="navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header	">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -32,7 +32,7 @@
                 <ul class="nav navbar-nav navbar-right">
 					<?php
 					if (isset($_SESSION['username'])){
-						echo "<li><a href='#'>Hi, ".$_SESSION['username']."</a></li>";
+						echo "<li><a href='myaccount.php'>Hi, ".$_SESSION['username']."</a></li>";
 						echo "<li><a href='logout.php'>Log out</a></li>";
 					}else{
 						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
@@ -53,100 +53,10 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-	<br><br><br>
+	<br>
     <div class="container">
         <div class="row">
-            <div class="col-md-10 bestproduct">
-                <div class="main box-border">
-				
-                    <div id="mi-slider" class="mi-slider">
-                        <ul id="price">
-							<!--Price-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img01"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p>
-								<p class="quality">Quality : <strong>95%</strong></p>
-								<p  class="age">Age : <strong>1 year</strong></p>
-								<p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img02"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p>
-								<p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img03"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img04"><h4>Samsung Galaxy</h4>
-								<p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-                        <ul id="quality">
-							<!--Quality-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img05"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img06"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img07"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/iphone.jpg" alt="img08"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-                        <ul id="age">
-							<!--Age-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img09"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img10"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img11"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-							<li><a href="#">
-                                <img src="assets/ItemSlider/images/IPhone_4.jpg" alt="img12"><h4>Iphone</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-                       
-						<ul id="view">
-							<!--Hot-->
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img12"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img13"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img14"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                            <li><a href="#">
-                                <img src="assets/ItemSlider/images/dummyimg.png" alt="img15"><h4>Samsung Galaxy</h4><p class="price">Price : <strong>$500</strong>  </p><p class="quality">Quality : <strong>95%</strong></p><p  class="age">Age : <strong>1 year</strong></p><p  class="view">View : <strong>1000 view</strong></p>
-                            </a></li>
-                        </ul>
-					
-						<!--Loc san pham theo:-->
-                        <nav class="navbar" data-toggle="collapse" data-target="#bs-example-navbar-collapse-12">
-                            <a href="#">Price</a>
-                            <a href="#">Quality</a>
-                            <a href="#">Time used</a>
-              				<a href="#">View</a>
-							
-                        </nav>
-                    </div>
-                    
-                </div>
-                <br />
-            </div>
-            <!-- /.col: More Product -->
-            
             <div class="col-md-2 text-center ">	
-				
                 <div id="sellphone" class="btn btn-danger">
 					<a href="seller.php">
                         <h4> <i class="fa fa-money"></i>&nbsp;SELL MY PHONE</h4>	
@@ -247,7 +157,7 @@
                 <!-- /.div -->
             </div>
             <!-- /.col -->
-            <div class="col-md-9">
+            <div class="col-md-9 ">
                 <div>
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
@@ -285,11 +195,12 @@
 					$res=mysql_query("SELECT phonename, price, brand, quality, age, imglink, idphone FROM _product limit $page_num, $per_page");
 					while($row=mysql_fetch_array($res)){
 						echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
-								echo "<div class='thumbnail product-box' style='height:250px'>";
+								echo "<div class='thumbnail product-box' style='height:300px'>";
 								echo "<img style='height:130px' src='".$row["imglink"]."'/>";
 								echo "<div class='caption'>";
 								echo "<br>";
 								echo "<h4>".$row["phonename"]."<h4>";
+								echo "<h5>$".$row["price"]."<h5>";
 								echo '<form action="product.php" method="post"><button type="submit" class="btn btn-success" name="product" value='.$row["idphone"].'>Contact</button></form>';
 								echo "</div></div></div>";
 					}
@@ -316,7 +227,9 @@
      <!--Footer -->   
     <!-- /.col -->
     <div class="col-md-12 end-box ">
-        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)
+        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)<br>
+		Email: binhnguyen2805@gmail.com<br>
+		Phone: 0973154950
     </div>
 	</div>
     <!-- /.col -->

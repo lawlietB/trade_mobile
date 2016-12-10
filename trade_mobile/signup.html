@@ -200,7 +200,9 @@
      <!--Footer -->   
     <!-- /.col -->
     <div class="col-md-12 end-box ">
-        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)
+        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)<br>
+		Email: binhnguyen2805@gmail.com<br>
+		Phone: 0973154950
     </div>
 	</div>
     <!-- /.col -->
@@ -213,16 +215,13 @@
     <script src="assets/ItemSlider/js/modernizr.custom.63321.js"></script>
     <script src="assets/ItemSlider/js/jquery.catslider.js"></script>
     <script>
-        $(function () {
-
-            $('#mi-slider').catslider();
-
-        });
-		
+ 	
 		$(function () {
             $('#repassword').change(function(){
 				if($('#password').val() !== $('#repassword').val()){
-				$("#checkpassword").html("your password is wrong");
+				$("#checkpassword").html("*your password is wrong");
+				$('#password').html('<div class="form-group"><label>Password</label><input class="form-control has-error" type="password" name="password" id="password"></div>');
+				$('#repassword').html('<div class="form-group"><label>Re-Password</label><input class="form-control has-error" type="password" id="repassword"></div>');
 				$('#submit').addClass('disabled');
 				}
 				else{

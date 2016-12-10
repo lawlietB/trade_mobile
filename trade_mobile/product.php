@@ -36,7 +36,7 @@
            
 					<?php
 					if (isset($_SESSION['username'])){
-						echo "<li><a href='#'>Hi, ". $_SESSION['username']."</a></li>";
+						echo "<li><a href='myaccount.php'>Hi, ". $_SESSION['username']."</a></li>";
 						echo "<li><a href='logout.php'>Log out</a></li>";
 					}else{
 						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
