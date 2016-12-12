@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php 
+	session_start();
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +14,19 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="assets/ItemSlider/css/main-style.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
+	<style>
+		table, td	{
+			border: 1px solid black;
+			padding-top: 7px;
+			padding-bottom: 7px;
+		}
+	</style>
 </head>
 <body>
-    <nav class="navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="navbar-header	">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -30,17 +39,20 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right">
+           
 					<?php
 					if (isset($_SESSION['username'])){
-						echo "<li><a href='myaccount.php'>Hi, ".$_SESSION['username']."</a></li>";
+						echo "<li><a href='myaccount.php'>Hi, ". $_SESSION['username']."</a></li>";
 						echo "<li><a href='logout.php'>Log out</a></li>";
 					}else{
 						echo "<li><a href='login.html'>Sign in</a></li><li><a href='signup.html'>Sign up</a></li>";
 					}
 					?>
+                
                 </ul>
-				
-                <form id="search" class="navbar-form" role="search" action="search.php" method="get">
+                </ul>
+                <form class="navbar-form" role="search" action="search.php" method="get">
                     <div class="form-group">
                         <input type="text" placeholder="Enter Keyword Here ..." class="form-control" name="keyword">
                     </div>
@@ -49,30 +61,18 @@
                 </form>
             </div>
             <!-- /.navbar-collapse -->
-			
         </div>
         <!-- /.container-fluid -->
     </nav>
-	<br>
     <div class="container">
         <div class="row">
-            <div class="col-md-2 text-center ">	
-                <div id="sellphone" class="btn btn-danger">
-					<a href="seller.php">
-                        <h4> <i class="fa fa-money"></i>&nbsp;SELL MY PHONE</h4>	
-					</a>
-                </div>
-            </div>
-            <!-- /.col -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
+            <div class="row">
             <div class="col-md-3">
                 <div>
                     <p class="list-group-item active list-group-item-success">Brand</p>
                     <ul class="list-group">
 
-                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Iphone" class="btn btn-default option"></input></form> 
+                        <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:78%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Iphone" class="btn btn-default option"></input></form>
 							
                         </li>
                         <li class="list-group-item" style="padding:0px;"><form action="search.php" method="get"><input style="padding:10px; padding-right:72.5%; border: 0px; margin: 0px;" type="submit" name="keyword" value="Samsung" class="btn btn-default option"></input></form>
@@ -119,117 +119,171 @@
                         <li class="list-group-item dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Price</a>
 							<ul class="dropdown-menu">
-                                <li><a href="#">By Price Low</a></li>
+                                <li><a href="index.html#_product">By Price Low</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">By Price High</a></li>
+                                <li><a href="index.html#_product">By Price High</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">$30-$50</a></li>
+                                <li><a href="index.html#_product">$30-$50</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">$50-$100</a></li>
+                                <li><a href="index.html#_product">$50-$100</a></li>
 								<li class="divider"></li>
-                                <li><a href="#">$100-$200</a></li>
+                                <li><a href="index.html#_product">$100-$200</a></li>
 								<li class="divider"></li>
-                                <li><a href="#">$200-$500</a></li>
+                                <li><a href="index.html#_product">$200-$500</a></li>
 								<li class="divider"></li>
-                                <li><a href="#">$500-$1000</a></li>
+                                <li><a href="index.html#_product">$500-$1000</a></li>
 								<li class="divider"></li>
-                                <li><a href="#">> $2000</a></li>
+                                <li><a href="index.html#_product">> $2000</a></li>
                             </ul>	
 						</li>
                         <li class="list-group-item dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Quality</a>
 							<ul class="dropdown-menu">
                                 <li class="divider"></li>
-                                <li><a href="#">NEW</a></li>
+                                <li><a href="index.html#_product">NEW</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">>95%</a></li>
+                                <li><a href="index.html#_product">>95%</a></li>
 								<li class="divider"></li>
-                                <li><a href="#">>90%</a></li>
+                                <li><a href="index.html#_product">>90%</a></li>
 								<li class="divider"></li>
-                                <li><a href="#">90%</a></li>
-								
+                                <li><a href="index.html#_product">90%</a></li>
                             </ul>	
 						</li>
-                        <li class="list-group-item"><a href="#">Time used</a></li>
+                        <li class="list-group-item"><a href="index.html#_product">Time used</a></li>
 
                     </ul>
                 </div>
                 <!-- /.div -->
             </div>
-            <!-- /.col -->
-            <div class="col-md-9 ">
-                <div>
+		<div class="col-md-9">
+			<div>
                     <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                     </ol>
                 </div>
-                <!-- /.div -->
-                <div class="row">
-                    <div class="btn-group alg-right-pad">
-                        <button type="button" class="btn btn-default"><strong id="count_item"></strong>items</button>
-                        
-                    </div>
-                </div
-                <!-- /.row -->
-				<div id="_product">
-					<!--Product-->
-                <?php
-					$per_page = 12;
-					mysql_connect("localhost","root","");
-					mysql_select_db("trademobile");
-					//count product
-					$res_cou = mysql_query("SELECT idphone from _product");
-					$cou = mysql_num_rows($res_cou);
-					if(isset($_GET["page"]))
-						$page = $_GET["page"];
-					else $page = 0;
-					if($page=="" || $page < "1"|| $page=="1"){
-						$page_num = 0;
-					}
-					else if($page > ceil($cou/$per_page)){
-						$page_num =  ceil($cou/$per_page);
-					}
-					else{
-						$page_num = ($page*$per_page) -	$per_page;
-					}
-					$res=mysql_query("SELECT phonename, price, brand, quality, age, imglink, idphone FROM _product limit $page_num, $per_page");
-					while($row=mysql_fetch_array($res)){
-						echo "<div class='col-md-4 text-center col-sm-6 col-xs-6'>";
-								echo "<div class='thumbnail product-box' style='height:300px'>";
-								echo "<img style='height:130px' src='".$row["imglink"]."'/>";
-								echo "<div class='caption'>";
-								echo "<br>";
-								echo "<h4>".$row["phonename"]."<h4>";
-								echo "<h5>$".$row["price"]."<h5>";
-								echo '<form action="product.php" method="post"><button type="submit" class="btn btn-success" name="product" value='.$row["idphone"].'>Contact</button></form>';
-								echo "</div></div></div>";
-					}
-				//count number of page
-				$a = ceil($cou/$per_page); //a is number of page
-				?>
-					<div class="row">
-						<ul class="pagination alg-right-pad">
-							<?php
-								for($b = 1; $b <= $a; $b++){
-								?><li><a href="index.php?page=<?php echo $b;?>"> <?php echo $b." "; ?></a><?php	
-							}
-							?>
-						</ul>
-					</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="page-head-line">Information</h1>
+					<h1 class="page-subhead-line">My account</h1>
 				</div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
-            </div>
-        <!-- /.row -->
+			</div>
+			<!--Information-->
+			<?php 
+				$username = $_SESSION['username'];
+				mysql_connect("localhost","root","");
+				mysql_select_db("trademobile");
+				$sql = mysql_query("SELECT _user.username, password, phone, email, address FROM _user WHERE username = '$username'");
+				$row=mysql_fetch_array($sql);
+			?>
+	<div class="col-md-10 col-sm-12 col-xs-12">
+		<div class="panel panel-info" id="myinfo">
+			<div class="panel-heading">My information</div>
+				<div class="panel-body form-horizontal">
+<form class="form-horizontal" action="change_info.php" method="post" role="form">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" readonly="true" name="name" value="<?php echo $row["username"];?>">
     </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Phone</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control myinfor" readonly="true" name="phone" value="<?php echo $row["phone"];?>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control myinfor" readonly="true" name="email" value="<?php echo $row["email"];?>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Address</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control myinfor" readonly="true" name="address" value="<?php echo $row["address"];?>">
+    </div>
+  </div>
+   <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="btn btn-success" id="changeacc">Change</div>
+	  <button type="submit" class="btn btn-danger" id="done" name="submit">Done</button>
+    </div>
+  </div>
+</form>
+</div></div></div>
+
+<div class="col-md-10 col-sm-12 col-xs-12">
+	<div class="panel panel-info">
+		<div class="panel-heading">My Phone</div>
+			<div class="panel-body">
+				<div class="form-group">
+				<table class="col-md-12 col-sm-12 col-xs-12">
+				<tr>
+					<td style="background-color: #DFF0D8;"><center><b>Phone name<b></center></td>
+					<td style="background-color: #DFF0D8;"><center><b>Price<b></center></td>
+					<td style="background-color: #DFF0D8;"><center><b>Brand<b></center></td>
+					<td style="background-color: #DFF0D8;"><center><b>Quality<b></center></td>
+					<td style="background-color: #DFF0D8;"><center><b>Time used<b></center></td>
+					<td style="background-color: #DFF0D8;"><center><b><b></center></td>
+				</tr>
+				<?php
+				$_sql = mysql_query("SELECT phonename, price, brand, quality, age, imglink, _trade.idphone FROM _product, _trade WHERE _product.idphone = _trade.idphone and _trade.username = '$username'");
+					while($row=mysql_fetch_array($_sql)){
+						if($row['quality'] == 1){
+					$quality='New';
+				}
+				else if($row['quality'] == 2){
+					$quality='95% - 100%';
+				}
+				else if($row['quality'] == 3){
+					$quality='90% - 95%';
+				}
+				else if($row['quality'] == 4){
+					$quality='90%';
+				}
+				//set time used
+				if($row['age'] == 1){
+					$age='near 1 month';
+				}
+				else if($row['age'] == 2){
+					$age='near 3 months';
+				}
+				else if($row['age'] == 3){
+					$age='near 6 months';
+				}
+				else if($row['age'] == 4){
+					$age='near 1 year';
+				}
+				else if($row['age'] == 5){
+					$age='near 2 years';
+				}
+				else if($row['age'] == 6){
+					$age='near 5 years';
+				}
+						echo "<tr><td>".$row["phonename"]."</td><td><center>".$row["price"]."</center></td><td><center>".$row["brand"]."</center></td><td><center>".$quality."</center></td><td><center>".$age."</center></td>";
+						echo '<td><center>
+								<form action="delete_product.php" method="get">
+									<button name="submit" type="submit" name="del_product" class="btn btn-danger" value="'.$row["idphone"].'">Del</button>
+								</form>
+							</center></td></tr>';
+			}
+				?>
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+				
+	</div>
+        <!-- /.row -->
+</div>
     <!-- /.container -->
+	
      <!--Footer -->   
     <!-- /.col -->
     <div class="col-md-12 end-box ">
-        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)<br>
-		Email: binhnguyen2805@gmail.com<br>
-		Phone: 0973154950
+        &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)
     </div>
 	</div>
     <!-- /.col -->
@@ -238,17 +292,25 @@
     <script src="assets/js/jquery-1.10.2.js"></script>
     <!--bootstrap JavaScript file  -->
     <script src="assets/js/bootstrap.js"></script>
-	<!--my script-->
-	<script src="assets/js/control.js"></script>
     <!--Slider JavaScript file  -->
     <script src="assets/ItemSlider/js/modernizr.custom.63321.js"></script>
     <script src="assets/ItemSlider/js/jquery.catslider.js"></script>
     <script>
-        $(function () {
-
-            $('#mi-slider').catslider();
-
+		$(function () {
+			$('#done').click(function(){
+				$('.myinfor').attr('readonly', true);
+				$('#done').addClass('disabled');	
+			});
         });
+		$(function () {	
+			$('#changeacc').click(function(){
+				$('.myinfor').attr('readonly', false);
+				$('#done').removeClass('disabled');	
+			});
+		});
+
+		
+		
 		</script>
 </body>
 </html>
