@@ -25,10 +25,9 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-
     <?php
     NavBar::begin([
-        'brandLabel' => 'TRADE MOBILE',
+        'brandLabel' => 'TRADEMOBILE ADMIN',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,11 +36,11 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => '', 'url' => ['/site/index']],
-            ['label' => '', 'url' => ['/site/about']],
-            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Product', 'url' => ['/product/index']],
+            ['label' => 'User', 'url' => ['/user/index']],
+            ['label' => 'Trade', 'url' => ['/trade/index']],
             Yii::$app->user->isGuest ? (
-                ['label' => '', 'url' => ['/site/login']]
+                ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
@@ -66,11 +65,11 @@ AppAsset::register($this);
 </div>
 
 <footer class="footer">
-    <div class="col-md-12 end-box ">
+    <div class="container">
         &copy; 2016 | &nbsp; All Rights Reserved | Design by: Bui Le Huynh (Lawliet)<br>
 		Email: binhnguyen2805@gmail.com<br>
 		Phone: 0973154950
-    </div>	
+    </div>
 </footer>
 
 <?php $this->endBody() ?>
