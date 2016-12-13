@@ -183,7 +183,7 @@
   <div class="form-group">
     <label class="col-sm-2 control-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control myinfor" readonly="true" name="name" value="<?php echo $row["username"];?>">
+      <input type="text" class="form-control" readonly="true" name="name" value="<?php echo $row["username"];?>">
     </div>
   </div>
   <div class="form-group">

@@ -153,7 +153,7 @@
 				</div>
 			</div>
 			<!--Information-->
-			<form action="signup.php" method='post' enctype="multipart/form-data">
+			<form action="signup.php" method='post' enctype="multipart/form-data" id="formsignup">
 					<div class="col-md-10 col-sm-12 col-xs-12" id="person_information">
 						<div class="panel panel-info">
 							<div class="panel-heading">
@@ -162,7 +162,7 @@
 							<div class="panel-body">
 								<div class="form-group">
 									<label>Your Name/Nick Name</label>
-									<input class="form-control" type="text" name="name">
+									<input class="form-control" type="text" name="name" id="username">
 								</div>
 								<div class="form-group">
 									<label>Password</label>
@@ -175,15 +175,15 @@
 								</div>
 								<div class="form-group">
 									<label>Your Number Phone</label>
-									<input class="form-control" type="text" name="phone">
+									<input class="form-control" type="text" name="phone" id="phonenumber">
 								</div>
 								<div class="form-group">
 									<label>Your Email Address</label>
-									<input class="form-control" type="text" name="email">
+									<input class="form-control" type="text" name="email" id="email">
 								</div>
 								<div class="form-group">
 									<label>Your Address</label>
-									<input class="form-control" type="text" name="address">
+									<input class="form-control" type="text" name="address" id="address">
 								</div>
 								<button type="submit" name="submit" class="btn btn-danger" id="submit">Sign up</button>
 							</div>
@@ -229,7 +229,62 @@
 					$('#submit').removeClass('disabled');
 				}
 			});
+			
+			$('#username').change(function(){
+				if($('#username').val() == NULL || $('#username').val() == ""){
+					$('#submit').addClass('disabled');
+				}
+				else{
+					$('#submit').removeClass('disabled');
+				}
+			});
+			
+			$('#password').change(function(){
+				if($('#password').val() == NULL || $('#password').val() == ""){
+					$('#submit').addClass('disabled');
+				}
+				else{
+					$('#submit').removeClass('disabled');
+				}
+			});
+			
+			$('#repassword').change(function(){
+				if($('#repassword').val() == NULL || $('#repassword').val() == ""){
+					$('#submit').addClass('disabled');
+				}
+				else{
+					$('#submit').removeClass('disabled');
+				}
+			});
+			
+			$('#phonenumber').change(function(){
+				if($('#phonenumber').val() == NULL || $('#phonenumber').val() == ""){
+					$('#submit').addClass('disabled');
+				}
+				else{
+					$('#submit').removeClass('disabled');
+				}
+			});
+			
+			$('#email').change(function(){
+				if($('#email').val() == NULL || $('#email').val() == ""){
+					$('#submit').addClass('disabled');
+				}
+				else{
+					$('#submit').removeClass('disabled');
+				}
+			});
+			
+			$('#address').change(function(){
+				if($('#address').val() == NULL || $('#address').val() == ""){
+					$('#submit').addClass('disabled');
+				}
+				else{
+					$('#submit').removeClass('disabled');
+				}
+			});
 			$('#submit').addClass('disabled');
+			
         });		
 		</script>
 </body>

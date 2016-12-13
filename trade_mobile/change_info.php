@@ -8,11 +8,12 @@ if(isset($_POST['submit'])){
 	$phone = $_POST['phone'];
 	$email = $_POST['email'];
 	$address = $_POST['address'];
-	mysql_query("UPDATE _user SET phone='$phone' WHERE username='$username'");
-	mysql_query("UPDATE _user SET email='$email' WHERE username='$username'");
-	mysql_query("UPDATE _user SET address='$address' WHERE username='$username'");
-	mysql_query("UPDATE _user SET username='$name' WHERE username='$username'");
-	mysql_query("UPDATE _trade SET username='$name' WHERE username='$username'");
+	
+		mysql_query("UPDATE _user SET phone='$phone' WHERE username='$username'");
+		mysql_query("UPDATE _user SET email='$email' WHERE username='$username'");
+		mysql_query("UPDATE _user SET address='$address' WHERE username='$username'");
+		mysql_query("UPDATE _user SET username='$name' WHERE username='$username'");
+		mysql_query("UPDATE _trade SET username='$name' WHERE username='$username'");	
 }
 header('Location:myaccount.php');
 ?>

@@ -200,7 +200,7 @@
 								echo "<br>";
 								
 								echo "<h4>".$row["phonename"]."<h4>";
-								echo "<h5>".$row["price"]."<h5>";
+								echo "<h5>$".$row["price"]."<h5>";
 								echo '<form action="product.php" method="post"><button type="submit" class="btn btn-success" name="product" value='.$row["idphone"].'>Contact</button></form>';
 								echo "</div></div></div>";
 					}
