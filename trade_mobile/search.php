@@ -199,8 +199,8 @@
 								echo "<div class='caption'>";
 								echo "<br>";
 								
-								echo "<h4>".$row["phonename"]."<h4>";
-								echo "<h5>$".$row["price"]."<h5>";
+								echo "<h4 style='color: red;'>".$row["phonename"]."<h4>";
+								echo "<h5 style='color: blue;'>$".$row["price"]."<h5>";
 								echo '<form action="product.php" method="post"><button type="submit" class="btn btn-success" name="product" value='.$row["idphone"].'>Contact</button></form>';
 								echo "</div></div></div>";
 					}
