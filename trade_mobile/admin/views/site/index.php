@@ -40,7 +40,7 @@ $this->title = 'Trade Mobile';
         text-align: center;
       }
     </style>
-	
+		
   </head>
   <body>
   

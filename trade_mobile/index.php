@@ -67,7 +67,7 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3" id="_nav">
                 <div>
                     <p class="list-group-item active list-group-item-success">Brand</p>
                     <ul class="list-group">
@@ -244,11 +244,7 @@
     <script src="assets/ItemSlider/js/modernizr.custom.63321.js"></script>
     <script src="assets/ItemSlider/js/jquery.catslider.js"></script>
     <script>
-        $(function () {
-
-            $('#mi-slider').catslider();
-
-        });
+      
 		</script>
 </body>
 </html>
