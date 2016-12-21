@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	include 'data_access_helper.php';
-	include 'user.php';
 	$db = new DataAccessHelper;
 	$db->connect();
 	$username = $_POST["name"];
@@ -9,14 +8,14 @@
 	//Kiem tra
 	if($username == NULL || $password == NULL){
 		echo "<script>alert('Username or password is not invalid!')</script>";
-		header('Location:login.html');
+		require 'login.html';
 	}
 	//check username exist
 	$check = $db->executeQuery("SELECT count(username) FROM _user WHERE username = '$username'");
 	$row = mysqli_fetch_assoc($check);
 	if($row['count(username)'] == 0){
 			echo "<script>alert('Username is not exist. Please try again!')</script>";
-			header('Location:login.html');
+			require 'login.html';
 	}
 	
 	//check correct password
@@ -24,7 +23,7 @@
 	$row = mysqli_fetch_assoc($check);
 	if($password != $row['password']){
 		echo "<script>alert('Password is wrong, please try again!')</script>";
-			header('Location:login.html');
+			require 'login.html';
 	}
 	else{
 	$_SESSION['username'] = $username;

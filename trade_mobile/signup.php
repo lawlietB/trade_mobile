@@ -29,6 +29,13 @@
         echo "<script> alert('Email is not Invalid. Please fill other email');</script>";
 		$fail = 1;
     }
+	
+	//kiem tra phone
+	if(!eregi("^[_0-9-]+$", $phone)){
+        echo "<script> alert('Phone is not Invalid. Please fill other phone');</script>";
+		$fail = 1;
+    }
+
 	//Kiểm tra phone đã có người dùng chưa
 	$check = $db->executeQuery("SELECT count(phone) FROM _user WHERE phone='$phone'");
 	$row = mysqli_fetch_assoc($check);
@@ -47,6 +54,7 @@
 			if($fail == 0){
 				$db->executeQuery("INSERT INTO _user(username, password, phone, email, address) values ('$user_name','$password','$phone','$email','$address')");
 				$db->close();
+				echo "<script>You have registered successfully</script>";
 				require('login.html');
 				
 			}

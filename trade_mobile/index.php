@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-md-2 text-center ">	
                 <div id="sellphone" class="btn btn-danger">
-					<a href="seller.php">
+					<a href="seller.php" style="text-decoration:none;">
                         <h4> <i class="fa fa-money"></i>&nbsp;SELL MY PHONE</h4>	
 					</a>
                 </div>
